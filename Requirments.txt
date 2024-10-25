@@ -1,0 +1,5 @@
+python==3.12.3
+Django==5.1.2
+Django-environ==0.11.2
+Djangorestframework==3.15.2
+Mysqlclient==2.2.5
