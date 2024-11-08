@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'blogapp',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -81,8 +83,12 @@ WSGI_APPLICATION = 'MindMatter.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME':env("NAME"),
+        "USER":env("USER"),
+        "PASSWORD":env("PASSWORD") ,
+        "PORT":env("PORT"),
+        "HOST":env("HOST")  
     }
 }
 
